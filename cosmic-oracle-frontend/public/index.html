@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Webpack will inject the title -->
+</head>
+<body>
+    <div id="app-container">
+        <header class="app-header">
+            <h1>Cosmic Oracle</h1>
+            <nav>
+                <a href="#" id="dashboard-link" class="active">Personal Sky</a>
+                <a href="#" id="natal-link">Natal Chart</a>
+                <!-- Add other navigation links here -->
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- The Loader -->
+            <div id="loader" class="loader-container" style="display: none;">
+                <div class="spinner"></div>
+                <p>Consulting the cosmos...</p>
+            </div>
+            
+            <!-- Error Messages -->
+            <div id="error-container" class="error-box" style="display: none;"></div>
+
+            <!-- The main content area that will be dynamically rendered -->
+            <div id="content-area">
+                <!-- Content from JS will be injected here -->
+            </div>
+        </main>
+    </div>
+    <!-- Webpack automatically injects the bundled JS file here -->
+</body>
+</html>
