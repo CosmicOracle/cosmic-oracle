@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Oracle</title>
+    <link rel="stylesheet" href="styles/cosmic-oracle.css">
+    <script src="js/api-client.js"></script>
+    <script src="js/auth-handler.js"></script>
+    <script src="js/chart-renderer.js"></script>
+    <script src="js/app.vanilla.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav>
+                <a href="/" class="nav-link">Dashboard</a>
+                <a href="/birth-chart" class="nav-link">Birth Chart</a>
+                <a href="/synastry" class="nav-link">Synastry</a>
+                <a href="/planetary-hours" class="nav-link">Planetary Hours</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="dashboard">
+                <div id="current-transits">
+                    <h2>Current Transits</h2>
+                    <div class="transit-data"></div>
+                </div>
+
+                <div id="moon-phase">
+                    <h2>Moon Phase</h2>
+                    <div class="moon-data"></div>
+                </div>
+            </section>
+        </main>
+
+        <div id="message-container"></div>        <div id="loading-spinner">Loading...</div>
+    </div>    <form id="settings-form">
+        <div class="form-group">
+            <label for="theme-setting">Theme</label>
+            <select id="theme-setting" title="Select theme">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="houseSystem-setting">House System</label>
+            <select id="houseSystem-setting" title="Select house system">
+                <option value="placidus">Placidus</option>
+                <option value="whole-sign">Whole Sign</option>
+                <option value="equal">Equal House</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="aspectOrbs-setting">Aspect Orbs</label>
+            <select id="aspectOrbs-setting" title="Select aspect orbs">
+                <option value="strict">Strict Orbs</option>
+                <option value="medium">Medium Orbs</option>
+                <option value="loose">Loose Orbs</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>
