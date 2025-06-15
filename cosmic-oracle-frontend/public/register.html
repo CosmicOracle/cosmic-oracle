@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Cosmic Oracle</title>
+    <link rel="stylesheet" href="/styles/auth.css"> <!-- Link to the shared stylesheet -->
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <h1>Create Your Account</h1>
+        <p class="subtitle">Begin your journey with the Cosmic Oracle.</p>
+        
+        <!-- This container will be used by JavaScript to show error messages -->
+        <div id="error-container" class="error-box" style="display: none;"></div>
+
+        <form id="register-form" class="auth-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <button type="submit" class="auth-button">Register</button>
+        </form>
+
+        <div class="auth-footer">
+            Already have an account? <a href="/login.html">Log In</a>
+        </div>
+    </div>
+
+    <!-- The JavaScript to handle this form submission would be loaded here -->
+    <!-- For a multi-page app, you might have a dedicated register.js -->
+    <!-- For an SPA, your main app.js would handle this route -->
+    <script type="module" src="/js/auth/register.js"></script>
+
+</body>
+</html>
